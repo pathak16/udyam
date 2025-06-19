@@ -4,7 +4,7 @@ function Results({ data }) {
     return (
       <ul>
         {data.map((point, i) => (
-          <li key={i} style={{ marginBottom: "1rem", lineHeight: "1.6" }}>
+            <li key={`${point.name}-${point.lat}-${point.lng}`}>
             {/* <p>{point}</p> */}
             <strong>{point.name || "Unnamed Place"}</strong><br />
             📍 {point.address || "Address not available"}<br />

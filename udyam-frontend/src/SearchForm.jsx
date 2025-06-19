@@ -29,23 +29,38 @@ function SearchForm({ onSearch, onCluster }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Business Type"
-        value={type}
-        onChange={(e) => setType(e.target.value)}
-        required
-      />
-      <input
-        type="text"
-        placeholder="Location"
-        value={location}
-        onChange={(e) => setLocation(e.target.value)}
-        required
-      />
-      <button type="submit">Search</button>
-    </form>
+    <form onSubmit={handleSubmit} style={{ display: "flex", gap: "1rem", marginBottom: "1.5rem" }}>
+  <input
+    type="text"
+    placeholder="Business Type (e.g., cafe)"
+    value={type}
+    onChange={(e) => setType(e.target.value)}
+    required
+    style={{ flex: 1, padding: "0.5rem", border: "1px solid #ccc", borderRadius: "4px" }}
+  />
+  <input
+    type="text"
+    placeholder="Location (e.g., Baner)"
+    value={location}
+    onChange={(e) => setLocation(e.target.value)}
+    required
+    style={{ flex: 1, padding: "0.5rem", border: "1px solid #ccc", borderRadius: "4px" }}
+  />
+  <button
+    type="submit"
+    style={{
+      padding: "0.5rem 1rem",
+      backgroundColor: "#2a7ade",
+      color: "#fff",
+      border: "none",
+      borderRadius: "4px",
+      cursor: "pointer"
+    }}
+  >
+    Search
+  </button>
+</form>
+
   );
 }
 
