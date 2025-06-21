@@ -5,13 +5,13 @@ Navigate to the project folder:
 cd udyam
 
 Open the frontend folder:
-cd frontend
+cd udyam-frontend
 npm install
 npm run dev
 
 
 Backend:
-cd backend
+cd udyam-backend
 
 Activate virtual environment:
 For macOS:
